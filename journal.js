@@ -86,7 +86,7 @@ class JournalApp {
 
                 <div class="entry-section">
                     <h3 class="section-title">💭 How I Felt Today</h3>
-                    <p class="entry-text">[Your emotions and feelings about today]</p>
+                    <p class="entry-text">[Happy Face]</p>
                 </div>
 
                 <div class="entry-section">
