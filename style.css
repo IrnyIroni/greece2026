@@ -1,0 +1,254 @@
+/* Creative & Cute Greece Travel Journal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #87CEEB;
+    --deep-blue: #1e90ff;
+    --sandy: #f4e4c1;
+    --cream: #fef9f3;
+    --accent-pink: #ff6b9d;
+    --accent-coral: #ff8c42;
+    --accent-teal: #20b2aa;
+    --text-dark: #2c3e50;
+    --border-color: #e8d4c4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--sandy) 0%, var(--cream) 100%);
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.2);
+    border-bottom: 3px solid var(--accent-coral);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Journal Entries */
+.journal-entry {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--accent-coral);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.journal-entry::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    background: var(--accent-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px white, 0 0 0 6px var(--accent-coral);
+}
+
+.journal-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Entry Header */
+.entry-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.entry-date {
+    font-size: 1.8rem;
+    color: var(--accent-coral);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.entry-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.weather {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Entry Content */
+.entry-content {
+    margin-bottom: 1.5rem;
+}
+
+.entry-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/* Food Section */
+.food-section {
+    background: linear-gradient(135deg, rgba(255, 183, 77, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-coral);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--accent-coral);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.food-list {
+    list-style: none;
+}
+
+.food-list li {
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+.food-list li::before {
+    content: '🍴';
+    position: absolute;
+    left: 0;
+}
+
+/* Photos Section */
+.photos-section {
+    background: linear-gradient(135deg, rgba(32, 178, 170, 0.1) 0%, rgba(135, 206, 235, 0.1) 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-teal);
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.photo-placeholder {
+    aspect-ratio: 1;
+    background: var(--primary-blue);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--accent-teal);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .journal-entry {
+        padding: 1.5rem;
+    }
+
+    .entry-date {
+        font-size: 1.5rem;
+    }
+
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entry-meta {
+        flex-direction: column;
+    }
+
+    .weather {
+        display: inline-block;
+    }
+}
+
+/* Print-friendly */
+@media print {
+    body {
+        background: white;
+    }
+
+    .journal-entry {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}
