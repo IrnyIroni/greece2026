@@ -13,9 +13,9 @@ const journalEntries = [
         people: "[Names and descriptions of interesting people you met]",
         food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
         feelings: "[Your emotions and feelings about today]",
-        highlights: "[Other memorable moments or thoughts]",
+        highlights: "[Packing I guess]",
         mood: "😊",
-        rating: 5
+        rating: 2
     },
     // ============================================
     // DAY 2 - June 21, 2026
