@@ -23,10 +23,12 @@ class JournalApp {
     formatDate(date) {
         const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
                           'July', 'August', 'September', 'October', 'November', 'December'];
+        const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         const day = date.getDate();
         const month = monthNames[date.getMonth()];
         const year = date.getFullYear();
-        return `${month} ${day}, ${year}`;
+        const dayName = dayNames[date.getDay()];
+        return { full: `${month} ${day}, ${year}`, short: `${month} ${day}`, day: dayName };
     }
 
     getWeatherForDay(index) {
@@ -39,70 +41,119 @@ class JournalApp {
             { emoji: '🌤️', text: 'Mostly Sunny' }
         ];
         
-        // Use index as seed for consistent weather per day
         const weather = weatherOptions[index % weatherOptions.length];
-        const temp = Math.floor((index % 9) + 24); // 24-32°C
+        const temp = Math.floor((index % 9) + 24);
         
-        return `${weather.emoji} ${weather.text}, ${temp}°C`;
+        return { emoji: weather.emoji, text: weather.text, temp: temp };
     }
 
     createEntryHTML(index) {
         const date = this.entries[index];
-        const formattedDate = this.formatDate(date);
+        const dateInfo = this.formatDate(date);
         const weather = this.getWeatherForDay(index);
-        const isLastDay = index === this.entries.length - 1;
+        const dayNumber = index + 1;
 
         return `
             <div class="entry-header">
-                <h2 class="entry-date">📅 ${formattedDate}</h2>
-                <div class="entry-meta">
-                    <span class="weather">${weather}</span>
+                <div class="day-number-tag">Day ${dayNumber}</div>
+                <h2 class="entry-title">Greece 2026</h2>
+                <p class="entry-date">${dateInfo.full} • ${dateInfo.day}</p>
+            </div>
+
+            <div class="entry-content">
+                <div class="entry-section">
+                    <h3 class="section-title">📍 Locations</h3>
+                    <p class="entry-text">[Enter locations visited today]</p>
+                </div>
+
+                <div class="entry-section">
+                    <h3 class="section-title">🎯 Events & Activities</h3>
+                    <p class="entry-text">[Describe the events and activities of the day]</p>
+                </div>
+
+                <div class="entry-section">
+                    <h3 class="section-title">👥 People Met</h3>
+                    <p class="entry-text">[Names and descriptions of interesting people you met]</p>
+                </div>
+
+                <div class="entry-section">
+                    <h3 class="section-title">🍽️ Food Adventures</h3>
+                    <ul class="food-list">
+                        <li>[Meal or dish eaten]</li>
+                        <li>[Meal or dish eaten]</li>
+                    </ul>
+                </div>
+
+                <div class="entry-section">
+                    <h3 class="section-title">💭 How I Felt Today</h3>
+                    <p class="entry-text">[Your emotions and feelings about today]</p>
+                </div>
+
+                <div class="entry-section">
+                    <h3 class="section-title">✨ Other Highlights</h3>
+                    <p class="entry-text">[Other memorable moments or thoughts]</p>
+                </div>
+
+                <div class="entry-section photos-section">
+                    <h3 class="section-title">📸 Photos</h3>
+                    <div class="photos-grid">
+                        <div class="photo-placeholder">
+                            <span class="photo-text">Add photo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    createQuickFactsHTML(index) {
+        const weather = this.getWeatherForDay(index);
+        const date = this.entries[index];
+        const dayNumber = index + 1;
+
+        return `
+            <h3 class="quick-facts-title">✨ Quick facts</h3>
+            
+            <div class="quick-fact">
+                <div class="quick-fact-emoji">🌤️</div>
+                <div class="quick-fact-content">
+                    <p class="quick-fact-label">Weather</p>
+                    <p class="quick-fact-value">${weather.emoji} ${weather.text}, ${weather.temp}°C</p>
                 </div>
             </div>
 
-            <div class="entry-section">
-                <h3 class="section-title">📍 Locations</h3>
-                <p class="entry-text">[Enter locations visited today]</p>
+            <div class="quick-fact">
+                <div class="quick-fact-emoji">📍</div>
+                <div class="quick-fact-content">
+                    <p class="quick-fact-label">Day</p>
+                    <p class="quick-fact-value">Day ${dayNumber} of 55</p>
+                </div>
             </div>
 
-            <div class="entry-section">
-                <h3 class="section-title">🎯 Events & Activities</h3>
-                <p class="entry-text">[Describe the events and activities of the day]</p>
+            <div class="quick-fact">
+                <div class="quick-fact-emoji">😊</div>
+                <div class="quick-fact-content">
+                    <p class="quick-fact-label">Mood</p>
+                    <div class="mood-emojis">
+                        <span class="mood-option">😊</span>
+                        <span class="mood-option">😍</span>
+                        <span class="mood-option">🥰</span>
+                        <span class="mood-option">😂</span>
+                        <span class="mood-option">🤩</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="entry-section weather-section">
-                <h3 class="section-title">🌤️ Weather</h3>
-                <p class="entry-text">[Weather conditions and temperature details]</p>
-            </div>
-
-            <div class="entry-section food-section">
-                <h3 class="section-title">🍽️ Food Adventures</h3>
-                <ul class="food-list">
-                    <li>[Meal or dish eaten]</li>
-                    <li>[Meal or dish eaten]</li>
-                </ul>
-            </div>
-
-            <div class="entry-section">
-                <h3 class="section-title">👥 People Met</h3>
-                <p class="entry-text">[Names and descriptions of interesting people you met]</p>
-            </div>
-
-            <div class="entry-section emotion-section">
-                <h3 class="section-title">💭 How I Felt Today</h3>
-                <p class="entry-text">[Your emotions and feelings about today]</p>
-            </div>
-
-            <div class="entry-section">
-                <h3 class="section-title">✨ Other Highlights</h3>
-                <p class="entry-text">[Other memorable moments or thoughts]</p>
-            </div>
-
-            <div class="entry-section photos-section">
-                <h3 class="section-title">📸 Moments Captured</h3>
-                <div class="photos-grid">
-                    <div class="photo-placeholder">
-                        <span class="photo-text">Add photo</span>
+            <div class="quick-fact">
+                <div class="quick-fact-emoji">⭐</div>
+                <div class="quick-fact-content">
+                    <p class="quick-fact-label">Rating</p>
+                    <div class="rating-stars">
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
+                        <span class="star">⭐</span>
                     </div>
                 </div>
             </div>
@@ -120,10 +171,10 @@ class JournalApp {
         const select = document.getElementById('daySelect');
         
         this.entries.forEach((date, index) => {
+            const dateInfo = this.formatDate(date);
             const option = document.createElement('option');
-            const formattedDate = this.formatDate(date);
             option.value = index;
-            option.textContent = `Day ${index + 1} - ${formattedDate}`;
+            option.textContent = `Day ${index + 1} - ${dateInfo.short}`;
             select.appendChild(option);
         });
 
@@ -167,6 +218,10 @@ class JournalApp {
         // Update entry display
         const entryContainer = document.getElementById('currentEntry');
         entryContainer.innerHTML = this.createEntryHTML(index);
+
+        // Update quick facts
+        const quickFactsContainer = document.getElementById('quickFacts');
+        quickFactsContainer.innerHTML = this.createQuickFactsHTML(index);
 
         // Update dropdown
         document.getElementById('daySelect').value = index;
