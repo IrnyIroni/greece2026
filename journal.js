@@ -8,14 +8,14 @@ const journalEntries = [
     {
         day: 1,
         date: "June 20, 2026",
-        locations: "[Enter locations visited today]",
-        events: "[Describe the events and activities of the day]",
-        people: "[Names and descriptions of interesting people you met]",
-        food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
-        feelings: "[Your emotions and feelings about today]",
-        highlights: "[Packing I guess]",
-        mood: "😊",
-        rating: 2
+        locations: "My house, Joel's house",
+        events: "Yummy steak, bye moms",
+        people: "Mom, Joel",
+        food: ["Steak", "Cheese bread thingy"],
+        feelings: "I am very sad",
+        highlights: "Packing, plane",
+        mood: "😖",
+        rating: 1.5
     },
     // ============================================
     // DAY 2 - June 21, 2026
