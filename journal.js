@@ -24,7 +24,7 @@ const journalEntries = [
         day: 2,
         date: "June 21, 2026",
         locations: "Konstantinos House, Plane",
-        events: " See dad",
+        events: " See dad again",
         people: "Konstantionos",
         food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
         feelings: "Feel motion sick on plane and throw up a lot",
