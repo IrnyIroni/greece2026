@@ -23,14 +23,14 @@ const journalEntries = [
     {
         day: 2,
         date: "June 21, 2026",
-        locations: "[Enter locations visited today]",
-        events: "[Describe the events and activities of the day]",
-        people: "[Names and descriptions of interesting people you met]",
+        locations: "Konstantinos House, Plane",
+        events: " See dad",
+        people: "Konstantionos",
         food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
-        feelings: "[Your emotions and feelings about today]",
+        feelings: "Feel motion sick on plane and throw up a lot",
         highlights: "[Other memorable moments or thoughts]",
-        mood: "😊",
-        rating: 5
+        mood: "😵‍💫",
+        rating: 4
     },
     // ============================================
     // DAY 3 - June 22, 2026
