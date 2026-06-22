@@ -26,9 +26,9 @@ const journalEntries = [
         locations: "Konstantinos House, Plane",
         events: " See dad again",
         people: "Konstantionos",
-        food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
+        food: ["Cheese Pie"],
         feelings: "Feel motion sick on plane and throw up a lot",
-        highlights: "[Other memorable moments or thoughts]",
+        highlights: "Cheese Pie",
         mood: "😵‍💫",
         rating: 4
     },
@@ -38,14 +38,14 @@ const journalEntries = [
     {
         day: 3,
         date: "June 22, 2026",
-        locations: "[Enter locations visited today]",
+        locations: "Camp",
         events: "[Describe the events and activities of the day]",
         people: "[Names and descriptions of interesting people you met]",
-        food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
-        feelings: "[Your emotions and feelings about today]",
-        highlights: "[Other memorable moments or thoughts]",
-        mood: "😊",
-        rating: 5
+        food: ["Yougurt", "Sesamee thing I dislike", "Juice", "Sandwich" ],
+        feelings: "Tired bus trip 4 hours to beach",
+        highlights: "Travel time is same as play time",
+        mood: "😴",
+        rating: 2.5
     },
     // ============================================
     // DAY 4 - June 23, 2026
