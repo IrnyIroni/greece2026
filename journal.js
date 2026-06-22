@@ -38,12 +38,12 @@ const journalEntries = [
     {
         day: 3,
         date: "June 22, 2026",
-        locations: "Camp",
-        events: "[Describe the events and activities of the day]",
-        people: "[Names and descriptions of interesting people you met]",
-        food: ["Yougurt", "Sesamee thing I dislike", "Juice", "Sandwich" ],
-        feelings: "Tired bus trip 4 hours to beach",
-        highlights: "Travel time is same as play time",
+        locations: "K House, Doukas Camp, Beach",
+        events: "First day at camp, I went to Doukas camp.",
+        people: "Another person named Irini at camp, Camp people, funny boys",
+        food: [" Breakfast Yougurt", "Sesamee bread thing I dislike", "Breakfast and Lunch: Juice", "lunch: Cheese, ham, lettuce and tommato Sandwich", "dinner after arriving back: Roasted Chicken dad got"],
+        feelings: "😴🫪😬Tired bus trip 4 hours to beach, way too much. There was this game that I did not understand at the beack trip, and I wanted to stop playing so badly. I did not like that I had to change in public with towel in front of others into normal clothes. I was so slow and almost was late to lunch",
+        highlights: "Travel time is same as play time. The camp kids think I know 0 words and were asking me stuff like What does good morning mean? ",
         mood: "😴",
         rating: 2.5
     },
