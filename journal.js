@@ -53,11 +53,11 @@ const journalEntries = [
     {
         day: 4,
         date: "June 23, 2026",
-        locations: "[Enter locations visited today]",
-        events: "[Describe the events and activities of the day]",
+        locations: "Camp, House",
+        events: "Go to camp and then go to Adventure Park",
         people: "[Names and descriptions of interesting people you met]",
         food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
-        feelings: "[Your emotions and feelings about today]",
+        feelings: "I first did not want to go to Adventure park and I was tired a lot. But when I got there I has some fun.",
         highlights: "[Other memorable moments or thoughts]",
         mood: "😊",
         rating: 5
