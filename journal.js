@@ -87,10 +87,10 @@ const journalEntries = [
         events: "I went to waterpark. I went here many times before. There was a big kid and little kid section.",
         people: "Played with Ivi on waterpaek but she could only go to little kid section. Then she went on the little kid section. ",
         food: ["Breakfast at camp: Sandwich", "Lunch: Pasta with sauce and cheese. Some people did not want sauce but I liked it. Dinner: Cheese pie."],
-        feelings: "[Your emotions and feelings about today]",
+        feelings: "I did not feel like eating yogurt today",
         highlights: "I got stuck on the King Cobra ride, the scariest ride in the park. It had this massive dip at the end and i got stuck right before it and then this lifeguard had to come and push me. ",
         mood: "😊",
-        rating: 5
+        rating: 3
     },
     // ============================================
     // DAY 7 - June 26, 2026
@@ -101,9 +101,9 @@ const journalEntries = [
         locations: "Home, camp",
         events: "I went to pool in camp. Part of my bite plate fell off at bus ride to camp. I did not leave camp. ",
         people: "[Names and descriptions of interesting people you met]",
-        food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
-        feelings: "[Your emotions and feelings about today]",
-        highlights: "[Other memorable moments or thoughts]",
+        food: ["Yogurt", "Lunch: Burger with horrible meat and potatoes, 1/5", "Dinner with Nikoleta mom but no Nikoleta, Tiwan food. I only ate rice and chicken."],
+        feelings: "😕😟I was scared when I found out that I could only get the bite plate restored on Tuesday when the dentist called it a dental emergency",
+        highlights: "Pool was nice but I did not really like the water games before that when I had to lay on the scorching hot grass",
         mood: "😊",
         rating: 5
     },
@@ -113,12 +113,12 @@ const journalEntries = [
     {
         day: 8,
         date: "June 27, 2026",
-        locations: "[Enter locations visited today]",
-        events: "[Describe the events and activities of the day]",
-        people: "[Names and descriptions of interesting people you met]",
-        food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
-        feelings: "[Your emotions and feelings about today]",
-        highlights: "[Other memorable moments or thoughts]",
+        locations: "House",
+        events: "All I did was stay at home and do hours of math",
+        people: "Dad",
+        food: ["Breakfast: Peppa Pig Yogurt", "Lunch: Pizza and garlic breadsticks from Flower shop"],
+        feelings: "Very boring and sad. Dad was at work whole day. Dad was thinking of delivery lunch but he decided not to.",
+        highlights: "Not much did end of unit 1 and unit 2 of Khan Academy. Diana and Nikos was at wedding somewhere I think on island.",
         mood: "😊",
         rating: 5
     },
