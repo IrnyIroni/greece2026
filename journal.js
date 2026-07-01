@@ -160,10 +160,10 @@ const journalEntries = [
         date: "June 30, 2026",
         locations: "House, camp, park",
         events: "Played 2 rounds of lazer tag at a park that was 50 minutes away. There was red and blue team and I was blue team. No giant vests! ",
-        people: "[Names and descriptions of interesting people you met]",
+        people: "Dad",
         food: ["[Meal or dish eaten]", "[Meal or dish eaten]"],
         feelings: "Also I always fall asleep on the bus trip back to camp (so bus trip #3) ",
-        highlights: "[Other memorable moments or thoughts]",
+        highlights: "Also I went to the dentist and he said to just keep it and that the expander was the important thing. He also studied at Pennsylvania medical school! ",
         mood: "😊",
         rating: 5
     },
